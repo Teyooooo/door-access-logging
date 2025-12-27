@@ -7,8 +7,8 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 
-const char* ssid = "Samson Gabato";
-const char* password = "matjane1970";
+const char* ssid = "your_wifi_name"; // Change it with the SSID
+const char* password = "your_wifi_password"; // Change this with the password of that SSID
 
 #define ROOM_NAME "Room_1"
 #define SS_PIN D4  //--> SDA / SS is connected to pinout D4
@@ -24,7 +24,7 @@ byte readcard[4];
 char str[32] = "";
 String StrUID;
 String whoOpened;
-String api = "http://192.168.100.117:5000/";
+String api = "http://192.168.100.117:5000/"; // Change it with the IP address of the server
 
 String get_uid();
 void array_to_string(byte array[], unsigned int len, char buffer[]);
